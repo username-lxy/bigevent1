@@ -1,0 +1,50 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/assets/images/login_bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 310px;
+    background-color: #fff;
+}
+
+.login_title {
+    width: 100%;
+    height: 60px;
+    background: url(/assets/images/login_title.png) no-repeat center;
+}
+
+.login_form,
+.resgiter {
+    padding: 0 30px;
+}
+
+#go_reg,
+#go_login {
+    float: right;
+}
+
+.layui-form-item {
+    position: relative;
+}
+
+.layui-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.login_form input,
+.resgiter input {
+    padding-left: 30px;
+}
