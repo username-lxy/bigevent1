@@ -13,28 +13,33 @@ $(function() {
     })
 })
 
-// 获取信息，渲染头像
+// 获取信息
 function getUserInfo() {
     $.ajax({
         type: 'GET',
         url: '/my/userinfo',
         success: function(res) {
             if (res.status !== 0) layui.layer.msg('用户信息获取失败');
-            // 1、设置欢迎xxx用户
             // console.log(res);
-            const uname = res.data.nickname == '' ? res.data.username : res.data.nickname;
-            $('#welcome').html('欢迎&nbsp;&nbsp;' + uname);
-            // 2、设置用户头像
-            if (res.data.user_pic) {
-                let avatar = res.data.user_pic;
-                $('.myImg').attr('src', avatar).show();
-                $('.text-avatar').hide();
-            } else {
-                // 获取名字的第一个字符并转化为大写
-                const textAvatar = uname.substr(0, 1).toUpperCase();
-                $('.myImg').hide();
-                $('.text-avatar').html(textAvatar).show();
-            }
+            avatar(res);
         }
     })
+}
+
+// 渲染用户头像、信息
+function avatar(res) {
+    // 1、设置欢迎xxx用户
+    const uname = res.data.nickname == '' ? res.data.username : res.data.nickname;
+    $('#welcome').html('欢迎&nbsp;&nbsp;' + uname);
+    // 2、设置用户头像
+    if (res.data.user_pic) {
+        let avatar = res.data.user_pic;
+        $('.myImg').attr('src', avatar).show();
+        $('.text-avatar').hide();
+    } else {
+        // 获取名字的第一个字符并转化为大写
+        const textAvatar = uname.substr(0, 1).toUpperCase();
+        $('.myImg').hide();
+        $('.text-avatar').html(textAvatar).show();
+    }
 }
