@@ -43,3 +43,7 @@ function avatar(res) {
         $('.text-avatar').html(textAvatar).show();
     }
 }
+
+function toggleClass() {
+    $('.toggleClass').addClass('layui-this').siblings('dd').removeClass('layui-this');
+}

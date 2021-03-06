@@ -3,6 +3,10 @@ body {
     padding: 0;
 }
 
+a {
+    transition: none;
+}
+
 .layui-body {
     overflow: hidden;
 }

@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 15px;
+    background-color: #F2F3F5;
+}
+
+#btn-cate {
+    float: right;
+    margin-top: 7px;
+}
+
+#add-cateForm,
+#edit-cateForm {
+    padding-top: 20px;
+    padding-right: 30px;
+}
