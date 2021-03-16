@@ -22,7 +22,7 @@ $(function() {
             url: '/my/article/addcates',
             data: $(this).serialize(),
             success: function(res) {
-                if (res.status !== 0) return layui.layer.msg('文章分类添加失败');
+                if (res.status !== 0) return layui.layer.msg(res.message);
                 layui.layer.msg('文章分类添加成功');
                 getInitCate();
                 layer.close(index);

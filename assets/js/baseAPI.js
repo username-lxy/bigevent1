@@ -1,5 +1,6 @@
 $.ajaxPrefilter(function(option) {
     // 将url进行拼接
+    option.url = 'http://127.0.0.1:8080' + option.url;
     option.url = 'http://127.0.0.1:3007' + option.url;
     // option.url = 'http://ajax.frontend.itheima.net' + option.url;
 
