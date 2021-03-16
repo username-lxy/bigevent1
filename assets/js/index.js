@@ -29,7 +29,7 @@ function getUserInfo() {
 // 渲染用户头像、信息
 function avatar(res) {
     // 1、设置欢迎xxx用户
-    const uname = res.data.nickname == '' ? res.data.username : res.data.nickname;
+    const uname = res.data.nickname == null ? res.data.username : res.data.nickname;
     $('#welcome').html('欢迎&nbsp;&nbsp;' + uname);
     // 2、设置用户头像
     if (res.data.user_pic) {

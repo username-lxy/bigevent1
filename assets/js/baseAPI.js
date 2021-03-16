@@ -1,6 +1,7 @@
 $.ajaxPrefilter(function(option) {
     // 将url进行拼接
-    option.url = 'http://ajax.frontend.itheima.net' + option.url;
+    option.url = 'http://127.0.0.1:3007' + option.url;
+    // option.url = 'http://ajax.frontend.itheima.net' + option.url;
 
     // 判断请求的url中是否含有my，如果有就需要传递一个headers
     const url = option.url;

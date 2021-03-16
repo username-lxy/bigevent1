@@ -25,7 +25,6 @@ $(function() {
             url: '/my/userinfo',
             data: $(this).serialize(),
             success: function(res) {
-                // console.log(res);
                 if (res.status !== 0) return layui.layer.msg('更新用户信息失败');
                 layui.layer.msg('用户信息更新成功');
                 window.parent.getUserInfo();
@@ -49,7 +48,6 @@ function initInfo() {
         url: '/my/userinfo',
         success: function(res) {
             if (res.status !== 0) layui.layer.msg('用户信息获取失败');
-            // console.log(res);
             layui.form.val("user-info", res.data);
         }
     })
